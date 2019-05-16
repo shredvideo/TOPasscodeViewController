@@ -200,6 +200,10 @@
 
 - (void)layoutSubviews
 {
+    if (!self.titleView.superview) {
+        [self addSubview:self.titleView];
+    }
+    
     if (self.horizontalLayout) {
         [self horizontallyLayoutSubviews];
     }
